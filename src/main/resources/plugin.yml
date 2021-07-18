@@ -1,0 +1,17 @@
+name: chlebCheck
+version: ${project.version}
+main: xchlebek.chlebcheck.Main
+prefix: chlebCheck
+load: STARTUP
+authors: [ xChlebek ]
+description: Ultimate checking plugin
+website: https://chlebmc.pl/
+commands:
+  sprawdz:
+    description: Sprawdza gracza.
+  czysty:
+    description: Oczyszcza gracza.
+permissions:
+  chlebcheck.admin:
+    description: Wszystkie permisje.
+    default: false
