@@ -11,6 +11,9 @@ commands:
     description: Sprawdza gracza.
   czysty:
     description: Oczyszcza gracza.
+    usage: /czysty (nick)
+    permission: chlebcheck.admin
+    permission-message: Nie masz permisji aby użyć tej komendy.
 permissions:
   chlebcheck.admin:
     description: Wszystkie permisje.

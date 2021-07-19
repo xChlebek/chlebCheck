@@ -13,20 +13,21 @@ public class czystyCommand extends JavaPlugin implements Listener {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
+        if (command.getName().equalsIgnoreCase("czysty")) {
+            if (sender instanceof Player) {
+                Player p = (Player) sender;
 
-        if (sender instanceof Player){
-            Player p = (Player) sender;
+                if (args.length > 0) {
+                    Player target = Bukkit.getPlayer(args[0]);
 
-            if (args.length > 0){
-                Player target = Bukkit.getPlayer(args[0]);
+                    target.sendMessage("§2Zostales oczyszczony.");
 
-                target.sendMessage("§2Zostales oczyszczony.");
-
-                p.sendMessage("§2Oczysciles gracza " + (args[0]) + "§2.");
+                    p.sendMessage("§2Oczysciles gracza " + (args[0]) + "§2.");
+                }
             }
+            return true;
         }
 
-
-        return true;
+        return false;
     }
 }
