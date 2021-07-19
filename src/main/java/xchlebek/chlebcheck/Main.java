@@ -11,8 +11,6 @@ public final class Main extends JavaPlugin {
         instance = this;
         this.getConfig().options().copyDefaults(true);
         this.saveDefaultConfig();
-        getCommand("czysty").setExecutor(new czystyCommand());
-        getCommand("sprawdz").setExecutor(new sprawdzCommand());
         Bukkit.getConsoleSender().sendMessage(Util.fix("§a§lPlugin zostal pomyslnie zaladowany!"));
     }
 
