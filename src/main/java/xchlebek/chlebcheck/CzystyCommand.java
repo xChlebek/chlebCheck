@@ -40,10 +40,10 @@ public class CzystyCommand implements Listener, CommandExecutor, TabCompleter {
         isChecking = true;
     }
 
-    @EventHandler
+    /* @EventHandler
     public void playerMove(PlayerMoveEvent e) {
         e.setCancelled(true);
-    }
+    } */
 
     @EventHandler
     public void processCommand(PlayerCommandPreprocessEvent e) {

@@ -6,7 +6,7 @@
 
     <groupId>xchlebek</groupId>
     <artifactId>chlebCheck</artifactId>
-    <version>1.0</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
     <name>chlebCheck</name>
