@@ -1,7 +1,7 @@
 package xchlebek.chlebcheck;
 
-import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
     private static Main instance;
@@ -9,9 +9,14 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-        this.getConfig().options().copyDefaults(true);
-        this.saveDefaultConfig();
+        getConfig().options().copyDefaults(true);
+        saveDefaultConfig();
         Bukkit.getConsoleSender().sendMessage(Util.fix("§a§lPlugin zostal pomyslnie zaladowany!"));
+        getCommand("czysty").setExecutor(new CzystyCommand());
+//        getCommand("czysty").setTabCompleter(new CzystyCommand());
+        getServer().getPluginManager().registerEvents(new CzystyCommand(),this);
+        getCommand("sprawdz").setExecutor(new SprawdzCommand());
+        getServer().getPluginManager().registerEvents(new SprawdzCommand(),this);
     }
 
     @Override
@@ -23,4 +28,11 @@ public final class Main extends JavaPlugin {
         return instance;
     }
 }
-
+/**
+ * ctr + alt + o
+ * ctr + alt + d
+ * ctr + alt + l
+ * shift + F6
+ * ctr + /
+ * alt + ins
+ */
